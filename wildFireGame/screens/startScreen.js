@@ -1,11 +1,19 @@
 
-
-function startScreen(){
-    introCardBox();
-    button(wX*2/100,wH*15/100+170,"Start");
+function startScreen() {
+    loadFadeIn();
+    mouseHover();
+    introCard.drawCard();
+    startButton.drawRedButton();
+    fill(255, 0, 0)
 }
 
-function introCardBox(){
-    fadeInCard(wX*2/100,wH*15/100, "You are the forest protector under a budget and scientists predict that there will likely be a fire in your forest in the next 3 years: "+"What can you do to prevent wildfires in the next 3 years?");
+function loadFadeIn() {
+    if (introCard.fadeInCard() != 255) {
+        print('fade')
+        introCard.fadeInCard();
+        if (startButton.fadeInRedButton() != 255) { 
+            startButton.fadeInRedButton(); 
+        }
+    } else { noLoop(); }
 }
 
