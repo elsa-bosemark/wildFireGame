@@ -31,8 +31,6 @@ class RedButton {
   fadeInRedButton() {
     if (this.fade < 255) {
       this.fade += 5;
-    }else{
-      return 255;
     }
   }
   fadeOutRedButton() {

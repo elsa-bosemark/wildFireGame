@@ -1,7 +1,10 @@
-function verdictScreen(){
+function verdictScreen() {
     continueButton.drawRedButton();
     continueButton.fadeInRedButton();
     mouseHover();
-    introCard.drawCard();
-    introCard.fadeInCard();
+    continueCard.drawCard();
+    continueCard.fadeInCard();
+    if (bushBurnControl == true) {
+        burnBush();
+    }
 }

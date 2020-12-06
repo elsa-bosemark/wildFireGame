@@ -2,6 +2,7 @@ let font;
 let fontBold;
 let bigTreeLeaves;
 let fire;
+let fireIcon;
 let fireex;
 let plant;
 
@@ -10,6 +11,7 @@ function preload() {
   fontBold = loadFont('fonts/Poppins-Bold.ttf');
   bigTreeLeaves = loadImage('./assets/Vector.svg');
   fire = loadImage('./assets/fire.svg');
+  fireIcon = loadImage('./assets/fireIcon.svg');
   fireex = loadImage('./assets/fireex.svg');
   plant = loadImage('./assets/plant.svg');
 }
