@@ -18,8 +18,6 @@ function mouseClicked() {
                 //     }
                 // }else{
                     screen = 2;
-                    print('done')
-               // }
             };
             if (screen == 3) { screen = 2 };
             if (screen == 4) { screen = 1 };
