@@ -8,10 +8,10 @@ let wH;
 let choiceER;//extinguix right away
 let choicePR;//plant fire resistant trees
 let choiceCB;//controle burning
+//buttons
 let startButton;
 let continueButton;
-let introCard;
-let continueCard;
+let playAgainButton;
 
 let gColor;
 let grColor;
@@ -23,29 +23,27 @@ function setup() {
 	wX = windowWidth;
 	wH = windowHeight;
 	gColor = color(140, 193, 82);
-    grColor = color(160, 212, 104);
+	grColor = color(160, 212, 104);
 	let moneyX;
 	moneyX = wX - 50;
 	for (let i = 0; i < 6; i++) {
-		playerMoney.push(new Money(moneyX, 40));
+		playerMoney.push(new Money(moneyX, 40, color(140, 193, 82)));
 		moneyX -= 50;
 	}
 	for (let i = 0; i < 3; i++) {
-		smallForest.push(new SmallTree(random(0, wX), wH * 39 / 50));
-		bigForest.push(new BigTree(random(0, wX), wH * 39 / 50));
+		smallForest.push(new SmallTree(random(0, wX), wH * 39 / 50,'no'));
+		bigForest.push(new BigTree(random(0, wX), wH * 39 / 50, 'no'));
 		bushGrass.push(new Bush(random(0, wX), wH - 40));
 	}
 	choiceER = new Choice(wX * 5 / 100, 70, fireex, "Extiguish fire right away", 1, color(255, 255, 255));
 	choicePR = new Choice(wX * 5 / 100, 130, plant, "Plant fire resistant trees", 2, color(255, 255, 255));
-	choiceCB = new Choice(wX * 5 / 100, 190, fireIcon, "Conduct control burings", 3, color(255, 255, 255));
+	choiceCB = new Choice(wX * 5 / 100, 190, fireIcon, "Conduct control burings", 2, color(255, 255, 255));
 
 	startButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Start", color(255, 162, 95), 0);
 	continueButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Continue", color(104, 199, 240), 0);
-
-	introCard = new Card(wX * 5 / 100, 70, "You are the forest protector under a budget and scientists predict that there will likely be a fire in your forest in the next 3 years: What can you do to prevent wildfires in the next 3 years?", 0);
-	continueCard = new Card(wX * 5 / 100, 70, "The climate has become hotter and drier, but there was no fire that year.", 0);
-
+	playAgainButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Play Again", color(255, 162, 95), 0);
 }
+
 
 function draw() {
 	sky();

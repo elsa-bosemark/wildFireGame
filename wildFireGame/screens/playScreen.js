@@ -6,15 +6,13 @@ function playScreen(){
     niceText();
     text('Year: '+year, wX*5/100,50);
     choiceButtons(); 
-    print('plays') 
     mouseHover();
     fill(255,0,0);
     endGameConditions();
 }
 
 function endGameConditions(){
- if(year>3 || playerMoney.length==0){
-     print('money year')
+ if(year>3 || playerMoney.length<0){
     screen = 4;
  }
 }
@@ -25,9 +23,18 @@ function choiceButtons(){
     choiceCB.drawChoice();
 }
 
+function checkIfPriceOverBudget(){
+    //choiceER.isPriceOverBudget();
+    //choicePR.isPriceOverBudget();
+    choiceCB.isPriceOverBudget();
+}
+
 function choiceActions(p) {
     playerMoney.splice(playerMoney.length - p, playerMoney.length);
-    choiceCB.updateChoicePrice();
+    // for(let i = 0; i<=p; i++){
+    //     print(playerMoney.length - i)
+    //     playerMoney[playerMoney.length-1 - i].greyMoney();
+    // }
     year++;
     changeSky();
     screen = 3;
@@ -40,10 +47,13 @@ function addBush(){
 }
 
 function burnBush(){
-    for (let i = 0; i < 3; i++){
+    if(bushGrass.length>=3){
+        for (let i = 0; i < 3; i++){
         let _x = round(bushGrass[i].x)+10
         let _y = round(bushGrass[i].y) -20
-        image(fire, _x, _y);
+        image(fire, _x, _y);  
+    }
+  
     }
 }
 
