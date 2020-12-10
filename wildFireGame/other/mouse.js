@@ -5,6 +5,7 @@ function mouseClicked() {
         //red button start and end
         if (mouseX >= wX * 5 / 100 && mouseX <= wX * 5 / 100 + 210 &&
             mouseY >= wH * 15 / 100 + 150 && mouseY <= wH * 15 / 100 + 210) {
+            buttonSound.play();
             if (screen == 1) { screen = 2 };
             if (screen == 3) {
                 screen = 2
@@ -44,7 +45,7 @@ function mouseClicked() {
                 grColor = color(160, 212, 104);
                 //reset the cb choice
                 priceOverBudget = false;
-                choiceChangeMoneyColor = false;
+                //choiceChangeMoneyColor = false;
             };
         }
     }

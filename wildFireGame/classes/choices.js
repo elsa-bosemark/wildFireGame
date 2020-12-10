@@ -1,5 +1,5 @@
 
-let choiceChangeMoneyColor = false;
+//let choiceChangeMoneyColor = false;
 let priceOverBudget = false
 
 
@@ -26,13 +26,14 @@ class Choice {
             newMoney.push(new Money(this.x + 330 + (a * 50), this.y + 25, color(140, 193, 82)));
             for (let b = 0; b < newMoney.length; b++) {
                 newMoney[b].drawMoney();  
-                if (choiceChangeMoneyColor == true) {
-                for (let c = 0; c < newMoney.length; c++) {
-                    newMoney[c].greyMoney();
+                //make money grey if it were over the budget
+            //     if (choiceChangeMoneyColor == true) {
+            //     for (let c = 0; c < newMoney.length; c++) {
+            //         newMoney[c].greyMoney();
                     
-                }
-                choiceChangeMoneyColor==false;
-            }
+            //     }
+            //     choiceChangeMoneyColor==false;
+            // }
             }
             
         }
@@ -56,8 +57,6 @@ class Choice {
     }
     isPriceOverBudget() {
         if (this.price > playerMoney.length) {
-            print(this.price, playerMoney.length)
-            //choiceChangeMoneyColor = true;
             priceOverBudget=true;
         }
     }

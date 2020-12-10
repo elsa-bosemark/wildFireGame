@@ -42,6 +42,9 @@ function setup() {
 	startButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Start", color(255, 162, 95), 0);
 	continueButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Continue", color(104, 199, 240), 0);
 	playAgainButton = new RedButton(wX * 5 / 100, wH * 15 / 100 + 160, "Play Again", color(255, 162, 95), 0);
+
+	//sound
+	buttonSound.volume(0.1);
 }
 
 
@@ -89,6 +92,4 @@ function forest() {
 			fireForest[d].drawFireTree();
 		}
 	}
-
-
 }

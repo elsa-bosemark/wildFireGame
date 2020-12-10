@@ -4,7 +4,6 @@ function endScreen() {
     burnBush();
     playAgainButton.drawRedButton();
     playAgainButton.fadeInRedButton();
-
 }
 
 function winOrLose() {
