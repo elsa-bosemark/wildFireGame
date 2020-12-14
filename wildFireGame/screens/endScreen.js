@@ -20,9 +20,11 @@ function winScreen() {
     skyHeat[0] = 199;
     skyHeat[1] = 233;
     skyHeat[2] = 249;
+    
     card(wX * 5 / 100, 70, 380, 18,"Thanks to your precautions you prepared the forest to be more fire resilent so that when there was a fire, the forest survived! Well done.");
     infoCard();
     articleCard();
+    reasonForEnd();
 }
 function loseScreen() {
     skyHeat[0] = 229;
@@ -30,6 +32,7 @@ function loseScreen() {
     skyHeat[2] = 229;
     grColor = color(135, 155, 160);
     gColor = color(196, 196, 196);
+    
     card(wX * 5 / 100, 70, 380,18, "Sadly the dry forest could not withstand the fire and burned out even with the efforts to extiguish the fire right away. Let this be a lesson learned in the importance of prevention.");
     infoCard();
     articleCard();
@@ -39,6 +42,7 @@ function loseScreen() {
     for (let i = 0; i < smallForest.length; i++) {
         smallForest[i].smallTreeBurned();
     }
+    reasonForEnd();
 }
 
 function infoCard() {
@@ -58,4 +62,16 @@ function articleButton(x,y) {
     textSize(18);
     text('Read More', x + 50, y + 25);
     fill(0,0,0)
+}
+
+function reasonForEnd(){
+    textSize(20);
+    fill(0,0,0);
+    print('here')
+    if(year>3){
+        print('year')
+     text( "3 years have passed!",wX * 4 / 10, 40)
+    }else{
+        text("Your ran out of money",wX * 4a / 10, 40)
+    }
 }
