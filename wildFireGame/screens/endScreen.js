@@ -72,6 +72,6 @@ function reasonForEnd(){
         print('year')
      text( "3 years have passed!",wX * 4 / 10, 40)
     }else{
-        text("Your ran out of money",wX * 4a / 10, 40)
+        text("Your ran out of money",wX * 4 / 10, 40)
     }
 }
