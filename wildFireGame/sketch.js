@@ -25,7 +25,7 @@ function setup() {
 	wH = windowHeight;
 	gColor = color(140, 193, 82);
 	grColor = color(160, 212, 104);
-	fireYear = floor(random(2,5));
+	fireYear = floor(random(3,6));
 	let moneyX;
 	moneyX = wX - 50;
 	for (let i = 0; i < 6; i++) {

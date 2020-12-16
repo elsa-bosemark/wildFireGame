@@ -8,6 +8,7 @@ let plant;
 let articleCover;
 let buttonSound;
 let fireCausesImage;
+let sun;
 let fireCausesArray;
 
 function preload() {
@@ -21,6 +22,7 @@ function preload() {
   plant = loadImage('./assets/plant.svg');
   articleCover = loadImage('./assets/fireArticleCover.png');
   buttonSound = createAudio('./assets/buttonPressSound.mp3');
+  sun = loadImage('./assets/sun.svg');
 
   fireCauseIndex= floor(random(0,3));
   fireCausesArray = [

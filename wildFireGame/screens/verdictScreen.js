@@ -1,4 +1,3 @@
-
 let fireCauseString = ['campfire left unattained', 'lightning strike', 'broken wire']
 let fireCauseIndex;
 let fireCausesIm;
@@ -12,7 +11,7 @@ function verdictScreen() {
   if (year == fireYear) {
     imageCard(wX * 5 / 100, 70, 380, 20, "There was a " + fireCause + " which started a fire!", fireCausesImage);
   } else {
-    card(wX * 5 / 100, 70, 380, 20, "The climate has become hotter and drier, but there was no fire that year. This is Year: " + year)
+    imageCard(wX * 5 / 100, 70, 380, 20, "The climate has become hotter and drier, but there was no fire that year. Year: " + year, sun)
   }
   if (bushBurnControl == true) {
     burnBush();

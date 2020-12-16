@@ -9,7 +9,7 @@ function mouseClicked() {
             if (screen == 1) { screen = 2 };
             //reset button
             if (screen == 4) {
-                fireYear = floor(random(2,5));
+                fireYear = floor(random(3,6));
                 print(fireYear);
                 year = 1;
                 bushGrass.splice(0, bushGrass.length - 4);
@@ -44,7 +44,7 @@ function mouseClicked() {
             };
             if (screen == 3) {
                 fireCausePlayOnce = 2;
-                if(year==fireYear){
+                if(year==fireYear || playerMoney.length<=0){
                   screen = 4;
                 }else{
                    screen = 2;
