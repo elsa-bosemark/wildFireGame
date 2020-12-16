@@ -1,7 +1,6 @@
 
 function endScreen() {
     winOrLose();
-    burnBush();
     playAgainButton.drawRedButton();
     playAgainButton.fadeInRedButton();
 }
@@ -9,7 +8,7 @@ function endScreen() {
 function winOrLose() {
     niceText();
     textSize(30);
-    if (bushGrass.length <= 3 || fireForest.length >= 6) {
+    if (bushGrass.length <= fireYear+2 || fireForest.length >= fireYear+4) {
         winScreen();
     } else {
         loseScreen();
@@ -24,9 +23,9 @@ function winScreen() {
     card(wX * 5 / 100, 70, 380, 18,"Thanks to your precautions you prepared the forest to be more fire resilent so that when there was a fire, the forest survived! Well done.");
     infoCard();
     articleCard();
-    reasonForEnd();
 }
 function loseScreen() {
+    burnBush();
     skyHeat[0] = 229;
     skyHeat[1] = 229;
     skyHeat[2] = 229;
@@ -42,16 +41,15 @@ function loseScreen() {
     for (let i = 0; i < smallForest.length; i++) {
         smallForest[i].smallTreeBurned();
     }
-    reasonForEnd();
 }
 
 function infoCard() {
-    card(wX * 4 / 10, 70, 180,20, "Resistant Fire: " + fireForest.length + " Dry Bushes: " + bushGrass.length);
+    card(wX * 4 / 10, 70, 200, 20, "Resistant Trees: " + fireForest.length + " Dry Bushes: " + bushGrass.length + ' Years: '+year);
 }
 
 function articleCard() {
-    card(wX * 5.7 / 10, 70, 250, 18,'How will California prevent more mega-wildfire disasters?');
-    articleButton(wX * 5.8 / 10+10, 170);
+    card(wX * 6 / 10, 70, 250, 18,'How will California prevent more mega-wildfire disasters?');
+    articleButton(wX * 6.1 / 10+10, 170);
 }
 
 function articleButton(x,y) {
@@ -64,14 +62,3 @@ function articleButton(x,y) {
     fill(0,0,0)
 }
 
-function reasonForEnd(){
-    textSize(20);
-    fill(0,0,0);
-    print('here')
-    if(year>3){
-        print('year')
-     text( "3 years have passed!",wX * 4 / 10, 40)
-    }else{
-        text("Your ran out of money",wX * 4 / 10, 40)
-    }
-}

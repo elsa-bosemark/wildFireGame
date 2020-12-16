@@ -7,16 +7,10 @@ function mouseClicked() {
             mouseY >= wH * 15 / 100 + 150 && mouseY <= wH * 15 / 100 + 210) {
             buttonSound.play();
             if (screen == 1) { screen = 2 };
-            if (screen == 3) {
-                screen = 2
-                if (bushBurnControl == true) {
-                    bushGrass.splice(0, 3);
-                    bushBurnControl = false;
-                }
-            };
             //reset button
             if (screen == 4) {
-                screen = 2
+                fireYear = floor(random(2,5));
+                print(fireYear);
                 year = 1;
                 bushGrass.splice(0, bushGrass.length - 4);
                 fireForest.splice(0, fireForest.length);
@@ -46,6 +40,19 @@ function mouseClicked() {
                 //reset the cb choice
                 priceOverBudget = false;
                 //choiceChangeMoneyColor = false;
+                screen = 2;
+            };
+            if (screen == 3) {
+                fireCausePlayOnce = 2;
+                if(year==fireYear){
+                  screen = 4;
+                }else{
+                   screen = 2;
+                }
+                if (bushBurnControl == true) {
+                    bushGrass.splice(0, 3);
+                    bushBurnControl = false;
+                }
             };
         }
     }
@@ -58,6 +65,7 @@ function mouseClicked() {
             addBush();
             choiceCB.updateChoicePrice();
             checkIfPriceOverBudget();
+            
 
 
         }

@@ -7,13 +7,13 @@ function playScreen() {
     choiceButtons();
     mouseHover();
     fill(255, 0, 0);
-    endGameConditions();
+    //endGameConditions();
 }
 
 function endGameConditions() {
-    if (year > 3 || playerMoney.length < 0) {
-        screen = 4;
-    }
+    // if (playerMoney.length < 0) {
+    //     screen = 4;
+    // }
 }
 
 function choiceButtons() {
@@ -29,6 +29,7 @@ function checkIfPriceOverBudget() {
 }
 
 function choiceActions(p) {
+    fireCausePlayOnce = 2;
     buttonSound.play();
     playerMoney.splice(playerMoney.length - p, playerMoney.length);
     // for(let i = 0; i<=p; i++){
