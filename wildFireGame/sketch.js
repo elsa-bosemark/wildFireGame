@@ -37,7 +37,7 @@ function setup() {
 		bigForest.push(new BigTree(random(0, wX), wH * 39 / 50, 'no'));
 		bushGrass.push(new Bush(random(0, wX), wH - 40));
 	}
-	choiceER = new Choice(wX * 5 / 100, 70, fireex, "Extiguish fire right away", 1, color(255, 255, 255));
+	choiceER = new Choice(wX * 5 / 100, 70, fireex, "Extinguish fire right away", 1, color(255, 255, 255));
 	choicePR = new Choice(wX * 5 / 100, 130, plant, "Plant fire resistant trees", 2, color(255, 255, 255));
 	choiceCB = new Choice(wX * 5 / 100, 190, fireIcon, "Conduct control burings", 2, color(255, 255, 255));
 
