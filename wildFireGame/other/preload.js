@@ -5,10 +5,10 @@ let fire;
 let fireIcon;
 let fireex;
 let plant;
+let sun;
 let articleCover;
 let buttonSound;
 let fireCausesImage;
-let sun;
 let fireCausesArray;
 
 function preload() {

@@ -10,7 +10,6 @@ function mouseClicked() {
             //reset button
             if (screen == 4) {
                 fireYear = floor(random(3,6));
-                print(fireYear);
                 year = 1;
                 bushGrass.splice(0, bushGrass.length - 4);
                 fireForest.splice(0, fireForest.length);

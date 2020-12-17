@@ -3,7 +3,6 @@ function endScreen() {
     winOrLose();
     playAgainButton.drawRedButton();
     playAgainButton.fadeInRedButton();
-    credit();
     infoCard();
     articleCard();
     reasonForEnd();
@@ -13,7 +12,7 @@ function endScreen() {
 function winOrLose() {
     niceText();
     textSize(30);
-    if (bushGrass.length <= fireYear + 2 || fireForest.length >= fireYear + 4) {
+    if (bushGrass.length <= fireYear + 4 || fireForest.length >= fireYear + 4) {
         winScreen();
     } else {
         loseScreen();
@@ -48,7 +47,7 @@ function loseScreen() {
 }
 
 function infoCard() {
-    card(wX * 4 / 10, 70, 200, 20, "Resistant Trees: " + fireForest.length + " Dry Bushes: " + bushGrass.length + ' Years: ' + year);
+    card(wX * 4 / 10, 70, 200, 20, "Resistant Trees: " + fireForest.length + " Dry Bushes: " + bushGrass.length + ' Years: ' + (year-1));
 }
 
 function articleCard() {
@@ -69,15 +68,10 @@ function articleButton(x, y) {
 function reasonForEnd() {
     textSize(20);
     fill(0, 0, 0);
-    print('here')
     if (playerMoney.length <= 0) {
         text("You ran out of money", wX * 4 / 10, 40)
     } else {
-        text("There was a fire on year " + year, wX * 4 / 10, 40)
+        text("There was a fire on year " + (year-1), wX * 4 / 10, 40)
     }
 }
 
-function credit() {
-    textSize(15);
-    text('Icons by Good Ware and Freepik from Falticon', wX * 2 / 100, 20)
-}
