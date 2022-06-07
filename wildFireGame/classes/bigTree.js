@@ -15,7 +15,7 @@ class BigTree {
         stroke(132, 71, 71);
         line(this.x+20,this.y+10,this.x,this.y+35);
         stroke(150, 83, 83)
-        line(this.x,this.y,this.x,this.y+120); 
+        line(this.x,this.y,this.x,this.y+(windowHeight/5.2)); 
 	}
 	bigTreeBurned(){ 
         this.burned = 'yes';
